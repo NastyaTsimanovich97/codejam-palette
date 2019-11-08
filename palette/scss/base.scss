@@ -63,6 +63,10 @@ main{
     margin-left: 1%;
     margin-right: 14%;
 }
+.icon-pencil{
+    width: 20px;
+    margin-right: 16.5%;
+}
 .button__choose-color,
 .button__prev-color{
     border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -101,4 +105,7 @@ main{
     top: 12.6%;
     left: 76%;
     justify-content: space-around;
+}
+.isActive__button{
+    background-color: rgba(0,0,0,0.05);
 }
