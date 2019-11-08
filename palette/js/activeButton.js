@@ -1,8 +1,8 @@
 let activeButton;
 if(!localStorage.getItem('activeButton')){
-    activeButton = document.querySelector('.button__paint-bucket');
+    activeButton = document.querySelector('.button__pencil');
     activeButton.classList.toggle("isActive__button");
-    localStorage.setItem('activeButton', 'button__paint-bucket')
+    localStorage.setItem('activeButton', 'button__pencil')
 }else{
     let classActive = localStorage.getItem('activeButton');
     activeButton = document.querySelector("."+classActive);

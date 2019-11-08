@@ -79,23 +79,23 @@ main{
     border-radius: 100%;
 }
 .circle-color{
-    background-color: gray;
+    background: gray;
 }
 .circle-prev-color{
-    background-color: greenyellow;
+    background: greenyellow;
 }
 .circle-user-color1{
-    background-color: red;
+    background: red;
 }
 .circle-user-color2{
-    background-color: yellow;
+    background: rgb(129, 150, 255);
 }
 
 .section__canvas{
     display: flex;
     height: 512px;
-    margin-top: 4.6%;
-    margin-left: 10%;
+    margin-top: 4.7%;
+    margin-left: 15%;
 }
 .button-control__canvas{
     height: 512px;
