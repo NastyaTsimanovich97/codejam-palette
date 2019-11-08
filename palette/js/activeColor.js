@@ -5,10 +5,10 @@ let currentColor;
 let prevColor;
 
 if(!localStorage.getItem('activeColor')){
-    currentColor = getComputedStyle(currentElement).background;
+    currentColor = getComputedStyle(currentElement).backgroundColor;
     localStorage.setItem('activeColor', currentColor);
 
-    prevColor = getComputedStyle(prevElement).background;
+    prevColor = getComputedStyle(prevElement).backgroundColor;
     localStorage.setItem('prevColor', prevColor);
 }
 else{
@@ -23,7 +23,7 @@ document.addEventListener('click',function(el){
     if(el.target.id=='button__color'){
         if(!el.target.classList.contains('button__current-color')){
             let activeElement = el.target.firstChild;
-            currentColor = getComputedStyle(activeElement).background;
+            currentColor = getComputedStyle(activeElement).backgroundColor;
             currentElement.style.background = currentColor;
 
             prevColor = localStorage.getItem('activeColor');
