@@ -8,6 +8,38 @@
     <title>Codejam-Palette</title>
 </head>
 <body>
+        <header class="header">
+                <nav class="navigation-menu">
+                    <div class="nav-icon"><img src="./src/assets/nav-icon.svg" alt="navigation"></div>
+                    <h1 class="header-text">CodeJam-Palette</h1>
+                    <div class="menu"><img class="menu-icon" src="./src/assets/menu-icon.svg" alt="menu"></div>
+                </nav>
+            </header>
+            <main>
+                <section class="button-control">
+                    <section class="palette">
+                            <div class="button-group-vertical">
+                                <button type="button" class="button button__paint-bucket"> <img class="button__icon icon-bucket" src="./src/assets/icon-butt.svg" alt="bucket" >Paint bucket</button>
+                                <button type="button" class="button button__choose-color"> <img class="button__icon icon-color" src="./src/assets/icon-picket.svg" alt="">Choose color</button>
+                                <button type="button" class="button button__move"> <img class="button__icon icon-move" src="./src/assets/icon-move.svg" alt="">Move</button>
+                                <button type="button" class="button button__transform"> <img class="button__icon icon-transform" src="./src/assets/icon-transform.svg" alt="">Transform</button>
+                            </div>
+                    </section>
+        
+                    <section class="color">
+                            <div class="button-group-vertical">
+                                <button type="button" class="button button__current-color"><div class="button__circle circle-color" ></div> Current color</button>
+                                <button type="button" class="button button__prev-color"><div class="button__circle circle-prev-color" ></div> Prev color</button>
+                                <button type="button" class="button button__user-color-1"><div class="button__circle circle-user-color1" ></div> User color 1</button>
+                                <button type="button" class="button button__user-color-1"><div class="button__circle circle-user-color2" ></div> User color 2</button>
+                            </div>
+                    </section>
+                </section>
+                <section class="section__canvas">
+                    <canvas id="canvas4" width="512" height="512"></canvas>
+                </section>
+            </main>
+        
     <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>
