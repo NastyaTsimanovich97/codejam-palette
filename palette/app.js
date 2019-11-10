@@ -5,4 +5,6 @@ import './js/fillBucket.js'
 import './js/activeColor.js'
 import './js/chooseColor.js'
 
-console.log('codejam-palette')
+
+console.log('codejam-palette');
+
