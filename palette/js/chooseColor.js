@@ -27,7 +27,6 @@ import {currentElement, prevElement} from './activeColor.js';
                 addColor(colorItem);
             }
             if(el.target.classList.contains("button__paint-bucket")){
-                // fillBucket();
                 el.preventDefault();
             }
         }
@@ -49,7 +48,6 @@ import {currentElement, prevElement} from './activeColor.js';
         localStorage.setItem('prevColor',prevColor);
     }
 
-
     window.addEventListener("load", startup, false);
 
     function startup(){
@@ -60,7 +58,6 @@ import {currentElement, prevElement} from './activeColor.js';
         colorInput.select();
         }
     function updateAll(event) {
-        console.log(event.target.value)
         addColor(event.target.value)
     }
 
