@@ -12,6 +12,6 @@ function pencil(el){
             let x = el.clientX - 495;
             let y = el.clientY - 140;
             canvas.fillStyle = color;
-            canvas.fillRect(x, y, 5, 5);
+            canvas.fillRect(x, y, 1, 1);
         }
 }
