@@ -8,7 +8,8 @@
     "start": "webpack --watch",
     "test": "mocha test/test.js",
     "lint": "eslint --debug palette/js/",
-    "lint:write": "eslint --debug palette/js/ --fix"
+    "lint:write": "eslint --debug palette/js/ --fix",
+    "prettier": "prettier  -- write palette/js/coords.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "eslint-loader": "^3.0.2",
     "eslint-plugin-jest": "^23.0.3",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "lint-staged": "^10.0.0-1",
     "mocha": "^6.2.2",
@@ -37,8 +39,10 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "eslint-plugin-import": "^2.18.2",
-    "html2canvas": "^1.0.0-rc.5"
+    "html2canvas": "^1.0.0-rc.5",
+    "prettier": "^1.19.1"
   }
 }

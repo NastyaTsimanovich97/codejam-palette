@@ -6,7 +6,6 @@ document.addEventListener('click',function(el){
 })
 
 function chooseColor(el){
-    console.log(el)
         let canvasColor = document.querySelector('.canvas').getContext('2d');
         let button = getActiveButton();
         if(button == 'button__choose-color'){  
@@ -16,7 +15,6 @@ function chooseColor(el){
                 let y = el.clientY - 140;
                 let colorItem = canvasColor.getImageData(x,y,1,1).data;
                 let rgbColor = toRgb(colorItem[0],colorItem[1],colorItem[2]);
-                console.log(rgbColor)
                 addColor(rgbColor);
             }
             if(el.target.tagName=='H1'){

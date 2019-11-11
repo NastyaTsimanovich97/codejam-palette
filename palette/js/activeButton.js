@@ -1,5 +1,4 @@
 let activeButton;
-
 if(!localStorage.getItem('activeButton')){
     activeButton = document.querySelector('.button__pencil');
     activeButton.classList.toggle("isActive__button");
