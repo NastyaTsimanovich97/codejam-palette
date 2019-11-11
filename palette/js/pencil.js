@@ -15,3 +15,4 @@ function pencil(el){
             canvas.fillRect(x, y, 1, 1);
         }
 }
+

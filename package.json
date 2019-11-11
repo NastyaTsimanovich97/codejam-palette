@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js",
+    "lint": "eslint --debug palette/js/",
+    "lint:write": "eslint --debug palette/js/ --fix"
   },
   "repository": {
     "type": "git",
@@ -19,10 +21,15 @@
   },
   "homepage": "https://github.com/NastyaTsimanovich97/codejam-palette#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.2",
     "css-loader": "^3.2.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-jest": "^23.0.3",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "lint-staged": "^10.0.0-1",
+    "mocha": "^6.2.2",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
@@ -30,6 +37,8 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "chai": "^4.2.0",
+    "eslint-plugin-import": "^2.18.2",
     "html2canvas": "^1.0.0-rc.5"
   }
 }
