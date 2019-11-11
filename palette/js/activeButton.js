@@ -1,4 +1,5 @@
 let activeButton;
+
 if(!localStorage.getItem('activeButton')){
     activeButton = document.querySelector('.button__pencil');
     activeButton.classList.toggle("isActive__button");
@@ -19,7 +20,7 @@ document.addEventListener('click',function(event){
         }
         if(activeButton.classList.contains("button__pencil")){
             localStorage.setItem('activeButton', 'button__pencil');
-        }
+        } 
         if(activeButton.classList.contains("button__transform")){
             localStorage.setItem('activeButton', 'button__transform');
         }
@@ -28,4 +29,28 @@ document.addEventListener('click',function(event){
         }
     }
 })
+document.addEventListener('keypress',function(e){
+    let classActive = localStorage.getItem('activeButton');
+    activeButton = document.querySelector("."+classActive);
+    activeButton.classList.remove("isActive__button");
+    console.log(activeButton)
+    if(e.code=='KeyB'){
+        activeButton = document.querySelector('.button__paint-bucket')
+        activeButton.classList.toggle("isActive__button");
+        localStorage.setItem('activeButton', 'button__paint-bucket');
+    }
+    if(e.code=='KeyP'){
+        activeButton = document.querySelector('.button__pencil')
+        activeButton.classList.toggle("isActive__button");
+        localStorage.setItem('activeButton', 'button__pencil');
+    }
+    if(e.code=='KeyC'){
+        activeButton = document.querySelector('.button__choose-color')
+        activeButton.classList.toggle("isActive__button");
+        localStorage.setItem('activeButton', 'button__choose-color');
+    }
+})
 
+function getActiveButton(){
+    return localStorage.getItem('activeButton');
+}

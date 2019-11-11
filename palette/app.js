@@ -7,4 +7,3 @@ import './js/chooseColor.js'
 import './js/pencil.js'
 
 console.log('codejam-palette');
-

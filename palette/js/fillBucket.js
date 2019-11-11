@@ -1,15 +1,14 @@
+let activeButton = localStorage.getItem('activeButton');
 
+if(activeButton=='button__paint-bucket'){
+    fillBucket();
+}
+
+function fillBucket(){
     let canvas = document.querySelector('.canvas').getContext('2d');
-
-    let activeButton = localStorage.getItem('activeButton');
-
-    if(activeButton=='button__paint-bucket'){
-        fillBucket();
-    }
-
-  function fillBucket(){
+    let color = localStorage.getItem('activeColor');
         document.addEventListener('click',function(el){
-            let color = localStorage.getItem('activeColor');
+            
             if(el.target.className=='canvas'){
             if(el.clientY<=240){
                 if(el.clientX<=623){
@@ -55,7 +54,7 @@
                     canvas.fillRect(128,384,256,128);
                 }
             }
-            }
-        })
-    }
+        }
+    })
+}
 

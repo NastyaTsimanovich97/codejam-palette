@@ -1,19 +1,22 @@
-import {currentElement, prevElement} from './activeColor.js';
+ import {currentElement, prevElement} from './activeColor.js';
+ 
+ 
+let activeButton = localStorage.getItem('activeButton');
+let canvas = document.querySelector('.canvas').getContext('2d');
+let colorInput = document.querySelector("#input__choose-color");
 
-    let activeButton = localStorage.getItem('activeButton');
+if(activeButton=='button__choose-color'){
+    chooseColor();
+}
+
+
+ function chooseColor(){
     let canvas = document.querySelector('.canvas').getContext('2d');
-    let colorInput = document.querySelector("#input__choose-color");
-
-    if(activeButton=='button__choose-color'){
-        chooseColor();
-    }
-
-    function chooseColor(){
         document.addEventListener('click',function(el){
         if(!el.target.classList.contains('button__choose-color') && el.target.id!='input__choose-color' && el.target.className!='label__choose-color'){
             if(el.target.className=='canvas'){
-                let x = el.clientX - 496;
-                let y = el.clientY - 115;
+                let x = el.clientX - 495;
+                let y = el.clientY - 140;
                 let colorItem = canvas.getImageData(x,y,1,1).data;
                 let rgbColor = toRgb(colorItem[0],colorItem[1],colorItem[2]);
                 addColor(rgbColor);
@@ -22,14 +25,12 @@ import {currentElement, prevElement} from './activeColor.js';
                 let colorItem = getComputedStyle(el.target).color;
                 addColor(colorItem);
             }
-            if(el.target.className!='canvas' && !el.target.classList.contains('button__icon')){
+            if(el.target.className!='canvas' && !el.target.classList.contains('button__icon') && event.target.id!='button__palette'){
                 let colorItem = getComputedStyle(el.target).backgroundColor;
                 addColor(colorItem);
             }
-            if(el.target.classList.contains("button__paint-bucket")){
-                el.preventDefault();
-            }
-        }
+           
+          }
         })
     }
 
