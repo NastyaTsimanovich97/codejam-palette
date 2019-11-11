@@ -6,6 +6,7 @@ document.addEventListener('click',function(el){
 })
 
 function chooseColor(el){
+    
         let canvasColor = document.querySelector('.canvas').getContext('2d');
         let button = getActiveButton();
         if(button == 'button__choose-color'){  
