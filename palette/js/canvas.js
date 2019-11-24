@@ -1,4 +1,4 @@
-let canvas4=document.getElementById('canvas4').getContext('2d');
+const canvas4=document.getElementById('canvas4').getContext('2d');
 
 canvas4.fillStyle='#00BCD4';
 canvas4.fillRect(0,0,128,128);
