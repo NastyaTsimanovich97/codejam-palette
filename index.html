@@ -21,7 +21,7 @@
                             <div class="button-group-vertical">
                                 <button type="button" class="button button__paint-bucket" id="button__palette"> <img class="button__icon icon-bucket" src="./palette/assets/icon-butt.svg" alt="bucket" >Fill bucket</button>
                                 <button type="button" class="button button__choose-color" id="button__palette"> 
-                                    <input type="color" id="input__choose-color" name="input__choose-color" value='#ffffff'> 
+                                    <input type="color" id="input__choose-color" class="input__choose-color" name="input__choose-color" value='#ffffff'> 
                                     <label class="label__choose-color" for="input__choose-color">
                                             <img class="button__icon icon-color" id="icon-color" src="./palette/assets/icon-picket.svg" alt="icon choose color">
                                     </label>
@@ -42,7 +42,9 @@
                     </section>
                 </section>
                 <section class="section__canvas">
-                    <canvas id="canvas4" class="canvas" width="512" height="512"></canvas>
+                    <canvas id="canvas4" class="canvas" width="512" height="512">
+                        <img id="load__img"  alt="img_canvas">
+                    </canvas>
                 </section>
             </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
@@ -50,6 +52,6 @@
     <script>
       mocha.setup('bdd');
     </script>
-    <script type="text/javascript" src="dist/bundle.js"></script>
+    <script type="text/javascript" src="./dist/bundle.js"></script>
 </body>
 </html>

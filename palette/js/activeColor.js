@@ -1,6 +1,5 @@
-
-export let currentElement = document.querySelector('.circle-color');
-export let prevElement = document.querySelector('.circle-prev-color');
+export const currentElement = document.querySelector('.circle-color');
+export const prevElement = document.querySelector('.circle-prev-color');
 
     let currentColor;
     let prevColor;
@@ -20,10 +19,10 @@ export let prevElement = document.querySelector('.circle-prev-color');
         prevElement.style.background = prevColor;
     }
 
-    document.addEventListener('click',function(el){
-        if(el.target.id=='button__color'){
+    document.addEventListener('click',(el)=>{
+        if(el.target.id==='button__color'){
             if(!el.target.classList.contains('button__current-color')){
-                let activeElement = el.target.firstChild;
+                const activeElement = el.target.firstChild;
                 currentColor = getComputedStyle(activeElement).backgroundColor;
                 currentElement.style.background = currentColor;
 
